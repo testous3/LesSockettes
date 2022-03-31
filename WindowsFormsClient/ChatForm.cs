@@ -38,9 +38,14 @@ namespace WindowsFormsSample
                 Log(Color.Gray, "Starting connection...");
                 try
                 {
+
+                    string url = addressTextBox.Text;
+
+                    url += url.Contains("?") ? "&" : "?";
+                    url += "username=" + usernameTextBox.Text;
+
                     _connection = new HubConnectionBuilder()
-                    .WithUrl(addressTextBox.Text + "?username=" + usernameTextBox.Text)
-                   
+                    .WithUrl(url)
                     .Build();
 
                     _connection.On<string, string>("SystemMessage", (s1, s2) => OnSend(s1, s2));
