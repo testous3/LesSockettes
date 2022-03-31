@@ -32,13 +32,13 @@
             this.connectButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.messagesList = new System.Windows.Forms.ListBox();
-            this.sendButton = new System.Windows.Forms.Button();
             this.messageTextBox = new System.Windows.Forms.TextBox();
             this.disconnectButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.NbConnexionLabel = new System.Windows.Forms.Label();
+            this.sendButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addressTextBox
@@ -86,18 +86,6 @@
             this.messagesList.TabIndex = 3;
             this.messagesList.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.messagesList_DrawItem);
             // 
-            // sendButton
-            // 
-            this.sendButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.sendButton.Enabled = false;
-            this.sendButton.Location = new System.Drawing.Point(674, 532);
-            this.sendButton.Name = "sendButton";
-            this.sendButton.Size = new System.Drawing.Size(75, 23);
-            this.sendButton.TabIndex = 5;
-            this.sendButton.Text = "Send";
-            this.sendButton.UseVisualStyleBackColor = true;
-            this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
-            // 
             // messageTextBox
             // 
             this.messageTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -105,7 +93,7 @@
             this.messageTextBox.Enabled = false;
             this.messageTextBox.Location = new System.Drawing.Point(15, 534);
             this.messageTextBox.Name = "messageTextBox";
-            this.messageTextBox.Size = new System.Drawing.Size(653, 20);
+            this.messageTextBox.Size = new System.Drawing.Size(654, 20);
             this.messageTextBox.TabIndex = 4;
             this.messageTextBox.Enter += new System.EventHandler(this.messageTextBox_Enter);
             // 
@@ -156,6 +144,18 @@
             this.NbConnexionLabel.Size = new System.Drawing.Size(0, 13);
             this.NbConnexionLabel.TabIndex = 10;
             // 
+            // sendButton
+            // 
+            this.sendButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.sendButton.Enabled = false;
+            this.sendButton.Location = new System.Drawing.Point(674, 532);
+            this.sendButton.Name = "sendButton";
+            this.sendButton.Size = new System.Drawing.Size(75, 23);
+            this.sendButton.TabIndex = 5;
+            this.sendButton.Text = "Send";
+            this.sendButton.UseVisualStyleBackColor = true;
+            this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
+            // 
             // ChatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,13 +186,13 @@
         private System.Windows.Forms.Button connectButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox messagesList;
-        private System.Windows.Forms.Button sendButton;
         private System.Windows.Forms.TextBox messageTextBox;
         private System.Windows.Forms.Button disconnectButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label NbConnexionLabel;
+        private System.Windows.Forms.Button sendButton;
     }
 }
 
