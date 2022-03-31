@@ -11,6 +11,7 @@ namespace SockettesServeur
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Console.WriteLine("Moi c'est Valentin");
         }
     }
 }
