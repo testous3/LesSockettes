@@ -39,7 +39,8 @@ namespace WindowsFormsSample
                 try
                 {
                     _connection = new HubConnectionBuilder()
-                    .WithUrl(addressTextBox.Text)
+                    .WithUrl(addressTextBox.Text + "?username=" + usernameTextBox.Text)
+                   
                     .Build();
 
                     _connection.On<string, string>("SystemMessage", (s1, s2) => OnSend(s1, s2));

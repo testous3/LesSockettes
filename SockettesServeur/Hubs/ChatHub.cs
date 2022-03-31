@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SignalR;
+using Microsoft.Extensions.Primitives;
 
 namespace SockettesServeur.Hubs
 {
@@ -15,7 +17,20 @@ namespace SockettesServeur.Hubs
         {
             _nbConnexion++;
             SendSystemInfo(_nbConnexion);
-            SendSystemMessage("SystemMessage", string.Format("Welcome"));
+
+            HttpContext httpContext = Context.GetHttpContext();
+            StringValues username;
+            httpContext.Request.Query.TryGetValue("username", out username);
+
+            string message = "Welcome";
+
+            if(httpContext.Request.Query.TryGetValue("username", out username) && !StringValues.IsNullOrEmpty(username))
+            {
+                message = string.Format("Welcome {0}", username.ToString());
+            }
+
+
+            SendSystemMessage("SystemMessage", message);
             return base.OnConnectedAsync();
         }
 
