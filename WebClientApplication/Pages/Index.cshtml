@@ -101,11 +101,11 @@
     });
 
 
-    hubConnection.on("ReceiveMessage", function (message) {
+    hubConnection.on("ReceiveMessage", function (sender,message) {
+ 
         commsLog.innerHTML += '<tr>' +
-            '<td class="commslog-server">Server</td>' +
-            '<td class="commslog-client">Client</td>' +
-            '<td class="commslog-data">' + htmlEscape(message) + '</td></tr>';
+            '<td class="commslog-client">' + sender + '</td>' +
+            '<td class="commslog-data">' + message + '</td></tr>';
     });
 
     hubConnection.on("ReceiveConnID", function (connid) {
@@ -118,10 +118,7 @@
     sendButton.onclick = function () {
         hubConnection.invoke("SendMessage", recipients.value, sendMessage.value);
         console.debug("SendMessage Invoked, on ID: " + hubConnection.id);
-        commsLog.innerHTML += '<tr>' +
-            '<td class="commslog-client">Client</td>' +
-            '<td class="commslog-server">Server</td>' +
-            '<td class="commslog-data">' + htmlEscape(message) + '</td></tr>';
+  
         event.preventDefault();
     };
 
