@@ -12,6 +12,8 @@ namespace SockettesServeur.Hubs
     public class ChatHub : Hub
     {
         static int _nbConnexion=0;
+        static Dictionary<string,string> _connectedUsers = new Dictionary<string, string>();
+
 
         public override Task OnConnectedAsync()
         {
@@ -19,6 +21,7 @@ namespace SockettesServeur.Hubs
             SendSystemInfo(_nbConnexion);
 
             HttpContext httpContext = Context.GetHttpContext();
+            string connexionId = Context.ConnectionId;
             StringValues username;
             httpContext.Request.Query.TryGetValue("username", out username);
 
@@ -27,6 +30,7 @@ namespace SockettesServeur.Hubs
             if(httpContext.Request.Query.TryGetValue("username", out username) && !StringValues.IsNullOrEmpty(username))
             {
                 message = string.Format("Welcome {0}", username.ToString());
+                _connectedUsers.Add(connexionId,username);
             }
 
 
@@ -38,6 +42,9 @@ namespace SockettesServeur.Hubs
         {
             _nbConnexion--;
             SendSystemInfo(_nbConnexion);
+
+            _connectedUsers.Remove(Context.ConnectionId);
+
             return base.OnDisconnectedAsync(exception);
         }
 
