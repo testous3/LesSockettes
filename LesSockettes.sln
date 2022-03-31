@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SockettesServeur", "Sockett
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsClient", "WindowsFormsClient\WindowsFormsClient.csproj", "{BDB97E88-B2C0-44C5-982E-D9CF0EBCA451}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{351C1C7E-57C2-490D-B647-66D36C793C72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebClientApplication", "WebClientApplication\WebClientApplication.csproj", "{8ACD8D28-D29D-4C80-9D37-974BFB49B6E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{BDB97E88-B2C0-44C5-982E-D9CF0EBCA451}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDB97E88-B2C0-44C5-982E-D9CF0EBCA451}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDB97E88-B2C0-44C5-982E-D9CF0EBCA451}.Release|Any CPU.Build.0 = Release|Any CPU
+		{351C1C7E-57C2-490D-B647-66D36C793C72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{351C1C7E-57C2-490D-B647-66D36C793C72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{351C1C7E-57C2-490D-B647-66D36C793C72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{351C1C7E-57C2-490D-B647-66D36C793C72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ACD8D28-D29D-4C80-9D37-974BFB49B6E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ACD8D28-D29D-4C80-9D37-974BFB49B6E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ACD8D28-D29D-4C80-9D37-974BFB49B6E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ACD8D28-D29D-4C80-9D37-974BFB49B6E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

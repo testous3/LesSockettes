@@ -22,7 +22,7 @@ namespace SockettesServeur
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials()
-                .WithOrigins("http://localhost");
+                .WithOrigins("https://localhost:44345");
             }));
 
             services.AddSignalR();
